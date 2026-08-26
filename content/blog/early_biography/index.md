@@ -1,5 +1,5 @@
 +++
-title = "About Early biography"
+title = "About Early Biography"
 date = "2026-08-26T10:32:55+01:00"
 
 #
@@ -22,7 +22,7 @@ I was prompted to return to this thought when reading Jean Lacouture's biography
 
 > The Rebel, the first of three volumes of biography which I have devoted to General de Gaulle, appears here in its English edition with light cuts that disturb neither the balance nor the spirit of the original. Much to my regret the publishers have found it necessary to condense the subsequent volumes, The Politician and The Sovereign, into a single volume, The Ruler. This cannot but affect the sense, in view of the fact that the book concerns a personality as complex and “controversial” as Charles de Gaulle.
 
-Now so as not to over-state my case here I should say that this first volume is by no means solely devoted to de Gaulle's early life but still-- I can't help but observe in general an outsized interest in those parts of biographies for which, if they were the totality of a person's life, no biography would have been written. And this is to me no where more apparent then in an almost salacious focus on childhood, both on the part of readers and authors.
+Now so as not to over-state my case here I should say that this first volume is by no means solely devoted to de Gaulle's early life but still-- I can't help but observe in general an outsized interest in those parts of biographies for which, if they were the totality of a person's life, no biography would have been written. And this is to me nowhere more apparent then in an almost salacious focus on childhood, both on the part of readers and authors.
 
 As to why this irritates me so, it is not only that I, apparently, miss out on some of "the sense" as it were in the second volume of my de Gaulle (I would frankly probably not have minded if Lacouture hadn't made such a point of it.) But more that I see this preoccupation with childhood as a manifestation of a pernicious misconception about human nature. That being-- as hinted towards in the opening-- that childhood is of singular importance to human development; and in particular to the determination of our personality and 'world view'.
 
