@@ -11,7 +11,7 @@ draft = false
 tags = ["unit distance",]
 +++
 
-This will be a single fixed-field example to hopefully aid in understanding the famous OpenAI counterexample disproving Paul Erdős's conjectured lower bound for the number of unit distances determined by a point set in the plain. I am working from [the human write-up](https://arxiv.org/abs/2605.20695), not the original paper. This example very much does not provide a sequence with $f$ tending to infinity and as such does not prove Theorem 1.1.
+This will be a single fixed-field example to hopefully aid in understanding the famous OpenAI counterexample disproving Paul Erdős's conjectured lower bound for the number of unit distances determined by a point set in the plane. I am working from [the human write-up](https://arxiv.org/abs/2605.20695), not the original paper. This example very much does not provide a sequence with $f$ tending to infinity and as such does not prove Theorem 1.1.
 
 It will also be very dry reading... oh well-- look at the graph!
 
@@ -89,7 +89,7 @@ u_j=\frac{\alpha_j}{\overline{\alpha_j}}
 \qquad 0\leq j\leq45.
 $$
 
-*^It might take a second to see that the $\alpha_1$ trickery works. Keep in mind also this is only possible as all ideals are principle in $\mathbb Z[i]$.*
+*^It might take a second to see that the $\alpha_1$ trickery works. Keep in mind also this is only possible as all ideals are principal in $\mathbb Z[i]$.*
 
 The first few values we get are $1$, $(-7+24i)/25$, $(-527-336i)/625$, $(11753-10296i)/15625$. Each has absolute value $1$, denominator dividing $5^{90}$, they are distinct as the ideal of $\alpha_1$ has exponent $+1$ of the prime ideal $P$ and $-1$ for its conjugate, so the powers of $\alpha_1$ will never "loop back around". Lemma 2.2 therefore gives at least $46$ distinct unit distance pairs
 $$
@@ -149,7 +149,7 @@ with the last value being the asymptotic bound achieved in the paper using class
 
 ## Note about the Plot
 
-Plotting every unit distance for the entire box $R=2$ is infeasible as the lattice is extremely fine. Instead each of the 46's distinct vectors is show just once, the construction does however include all the translates. Done in Matplotlib with help of the AI, and using the $\alpha_1$ powers trick from before:
+Plotting every unit distance for the entire box $R=2$ is infeasible as the lattice is extremely fine. Instead each of the 46 distinct vectors is shown just once, the construction does however include all the translates. Done in Matplotlib with help of the AI, and using the $\alpha_1$ powers trick from before:
 
 ```python
 us = []
