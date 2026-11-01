@@ -11,13 +11,13 @@ draft = false
 tags = ["unit distance",]
 +++
 
-This will be a single fixed-field example to hopefully aid in understanding the famous OpenAI counterexample disproving Paul Erdős's conjectured lower bound for the number of unit distances determined by a point set in the plane. I am working from [the human write-up](https://arxiv.org/abs/2605.20695), not the original paper. This example very much does not provide a sequence with $f$ tending to infinity and as such does not prove Theorem 1.1.
+This will be a single fixed-field example to hopefully aid in understanding the famous OpenAI counterexample disproving Paul Erdős's conjectured upper bound for the number of unit distances determined by a point set in the plane. I am working from [the human write-up](https://arxiv.org/abs/2605.20695), not the original paper. This example very much does not provide a sequence with $f$ tending to infinity and as such does not prove Theorem 1.1.
 
-It will also be very dry reading... oh well-- look at the graph!
+It will also be very dry reading... oh well-- look at this graph!
 
 ![diagram](unit-distances.svg)
 
-*^unit distances given by ratios of ideals about the origin (ooh neat)*
+*^unit distances given by ratios of ideals about the origin*
 
 
 ## First Quantities and Set-up
@@ -48,7 +48,7 @@ $$
 \quad P=(2+i),\quad\overline{P}=(2-i).
 $$
 
-Both have (field) norm of $5$ and ramification index $1$. They are one conjugate pair, so $s$ is $1$.
+Both have (ideal) norm of $5$ and ramification index $1$. They are one conjugate pair, so $s$ is $1$.
 
 Following the choice of $k$ from the proof of Theorem 1.1
 $$
@@ -76,7 +76,7 @@ I_j=P^j\overline{P}^{45-j}
 =\big((2+i)^j(2-i)^{45-j}\big).
 $$
 
-All are in the same ideal class, thus taking $I_0=(2-i)^{45}$ as the reference ideal, gives $I_jI_0^{-1}=(\alpha_j)$, with
+All are in the same ideal class, thus taking $I_0=((2-i)^{45})$ as the reference ideal, gives $I_jI_0^{-1}=(\alpha_j)$, with
 
 $$
 \alpha_1=\frac{2+i}{2-i}=\frac{3+4i}{5},\text{and } \alpha_j=\alpha_1^j.
@@ -89,7 +89,7 @@ u_j=\frac{\alpha_j}{\overline{\alpha_j}}
 \qquad 0\leq j\leq45.
 $$
 
-*^It might take a second to see that the $\alpha_1$ trickery works. Keep in mind also this is only possible as all ideals are principal in $\mathbb Z[i]$.*
+*^It might take a second to see that the $\alpha_1$ trickery works. Keep in mind also this is only possible as we are using a single prime pair.*
 
 The first few values we get are $1$, $(-7+24i)/25$, $(-527-336i)/625$, $(11753-10296i)/15625$. Each has absolute value $1$, denominator dividing $5^{90}$, they are distinct as the ideal of $\alpha_1$ has exponent $+1$ of the prime ideal $P$ and $-1$ for its conjugate, so the powers of $\alpha_1$ will never "loop back around". Lemma 2.2 therefore gives at least $46$ distinct unit distance pairs
 $$
@@ -128,11 +128,37 @@ u=11.5>36/\pi=36v/\pi,
 $$
 as required.
 
-Taking $R=2$, Lemma 2.1 yields
+## Counting the Points
+
+Taking $R=2$, our finite point set is
+$$
+P=(a+\Lambda)\cap B_2,
+$$
+where $B_R$ is the disc of radius $R$. We choose an $a$ by averaging over translations of the lattice: the average number of points inside $B_{R-1}$ is
+$$
+\frac{\operatorname{volume}(B_1)}{\operatorname{covol}(\Lambda)}
+=\pi D^2,
+$$
+so some translation achieves at least this average.
+
+For each point $x\in(a+\Lambda)\cap B_1$, all 46 points $x+u_j$ remain in the lattice translate, and
+$$
+|x+u_j|\leq|x|+|u_j|\leq2.
+$$
+Thus they also lie in $\mathcal P$.
+
+Adding the factor $2$ to account for double counting we have
+$$
+2\nu(P)\geq46\cdot|(a+\Lambda)\cap B_1|
+\geq46\pi D^2
+=46\pi\cdot5^{180}.
+$$
+
+We then see that this fit with the bounds calculated using $u$ as above
 $$
 |P|\leq\left(\frac{9R^2}{\delta^2}\right)^f=36\cdot5^{180}\approx2.349109608479469\times10^{127},
 $$
-and
+
 $$
 2\nu(P)\geq\left(\frac{u\pi R^2}{4v\delta^2}\right)^f=\frac{23\pi}{2}\cdot5^{180}
 \approx2.357482586596594\times10^{127}.
@@ -145,7 +171,7 @@ $$
 \approx1.0000121315955266
 \ggg 1+6.24\cdot10^{-38},
 $$
-with the last value being the asymptotic bound achieved in the paper using class-field tower.
+with the last value being the asymptotic bound achieved in the paper using class-field towers.
 
 ## Note about the Plot
 
@@ -178,7 +204,6 @@ ax.set(aspect="equal", xlim=(-1.1, 1.1), ylim=(-1.1, 1.1),
        xticks=ticks, yticks=ticks)
 ax.grid(True, linewidth=0.6)
 ```
-
 *^code used in plot at top of post*
 
 Thanks to everyone from the unit distance sum product reading group at the University of Bristol for which this was written. More to come!
