@@ -145,7 +145,7 @@ For each point $x\in(a+\Lambda)\cap B_1$, all 46 points $x+u_j$ remain in the la
 $$
 |x+u_j|\leq|x|+|u_j|\leq2.
 $$
-Thus they also lie in $\mathcal P$.
+Thus they also live in $P$.
 
 Adding the factor $2$ to account for double counting we have
 $$
